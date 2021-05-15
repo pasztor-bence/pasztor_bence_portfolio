@@ -1,0 +1,218 @@
+/*Általános*/
+	*, *::before, *::after{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		font-size: 16px;
+		background: fixed;
+		background-image: url(../css/kepek/hatter_fo.jpg);
+		background-position: center;
+		
+		/*background: url(../css/kepek/hatter_fo.jpg) no-repeat center center fixed;*/
+	/*kompatibilitáshoz:	*/
+	  	/*-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;*/
+		background-size: cover;
+	}
+	a{
+		text-decoration: none;
+		color: black;
+		font-family: 'Oswald', sans-serif;
+		font-weight: 400;
+	}
+	img{
+		max-width: 100%;
+	}
+/*Általános*/
+
+/*felépítés*/
+	body{
+		display: grid;
+		grid-template-areas: 
+		"fejlec"
+		"kontent"
+		"lablec"
+		;
+		min-height: 100vh;
+		grid-template-rows: max-content 1fr max-content;
+	}
+
+	header{
+		/*background-color: #EEEEEE;*/
+		grid-area: fejlec;
+	}
+	main{
+		/*background-image: url(../css/kepek/harold1.jpg);*/
+		grid-area: kontent;
+	}
+	footer{
+		background-color: lightblue;
+		grid-area: lablec;
+	}
+/*felépítés*/
+
+/*Fejléc*/
+	header{
+		display: flex;
+		flex-wrap: wrap;
+		height: 4rem;
+	}
+	.fejlec_box{
+		display: inline-block;
+		border: 1px solid #AAAAAA;
+		background-color: #AAAAAA;
+		padding: 0.5rem 0.6rem;
+		margin: 0.4rem 0.6rem;
+		border-radius: 0.5rem;
+		min-width: max-content;
+		line-height: 2rem;
+		max-height: 3rem;
+
+		transition: 0.2s;
+	}
+
+	.fejlec_box:hover{
+		background-color: #DCDCDC;
+		border-color: #CCCCCC;
+		color: black;
+		cursor: pointer;
+	}
+	.flex_jobbra{
+		text-align: left;
+		flex-grow: 1;
+	}
+	/*ugrálás megakadályozása: */
+	@media only screen and (min-width: 420px){
+		.flex_jobbra{
+			text-align: right;
+			flex-grow: 1;
+		}
+		.fejlec_box:hover{
+		padding: 0.75rem 1rem;
+		max-height: 4rem;
+		font-size: 1.25rem;
+		}	
+	}
+/*Fejléc*/
+
+/*Lábléc*/
+	footer{
+		vertical-align: text-bottom;
+	}
+	footer span{
+		text-decoration: underline;
+		margin-left: 0.5rem;
+	}
+	footer a{
+		display: block;
+		margin: 0.2rem 1rem;
+	}
+	@media only screen and (min-width: 315px){
+		footer a{
+			display: inline-block;
+		}
+		#el_facebook{
+			float: right;
+		}
+	}
+/*Lábléc*/
+
+
+
+/*Főoldal*/
+	@keyframes slideInFromLeft {
+	  0% {
+	    transform: translateX(-100%);
+	  }
+	  100% {
+	    transform: translateX(0);
+	  }
+	}	
+	#nagy_nev{
+		position: absolute;
+		top: 40%;
+		left: 20%;
+		animation: 1s ease-out 0s 1 slideInFromLeft;
+		margin-left: 2rem;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-size: 3rem;	
+	}
+	#nagy_portf{
+		position: absolute;
+		top: 40%;
+		left: 20%;
+		margin-top: 8rem;
+		animation: 1s ease-out 0s 1 slideInFromLeft;
+		font-family: 'Oswald', sans-serif;
+		font-weight: 700;
+		font-size: 1.5rem;
+	}
+	@media only screen and (min-width: 420px){
+		#nagy_nev{
+			font-size: 4.25rem;
+		}
+		#nagy_portf{
+			font-size: 3rem;
+		}
+	}
+	@media only screen and (min-width: 315px){
+		#nagy_portf{
+			margin-top: 5rem;
+		}
+	}
+/*Főoldal*/
+
+
+
+/*Munkáim_oldal*/
+	/*.munkak_racs{
+		display: flex;
+		flex-wrap: wrap;
+		max-height: 20rem;
+	}
+	.munka_egesz .kep img{
+		height: 10rem;
+
+	}*/
+	.munkak_racs{
+		display: grid;
+		margin-top: 5rem;
+		margin-left: 8%;
+		margin-right: 8%;
+		grid-template-columns: 1fr;
+		grid-gap: 20px;
+	}
+	.munka_egesz{
+		text-align: center;
+		max-width: 15rem;		
+	}
+	.kep img,video{
+		border: 1px solid grey;
+	}
+	.kep video{
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+	}
+	.nemsajat{
+		color: darkred;
+	}
+	@media only screen and (min-width: 320px){
+		.munkak_racs{
+			grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+		}
+	}
+	@media only screen and (min-width: 1150px){
+		.munkak_racs{
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+	@media only screen and (min-width: 320px){
+		.munka_egesz{
+			max-width: 25rem;
+		}
+	}
+/*Munkáim_oldal*/
