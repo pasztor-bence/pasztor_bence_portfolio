@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pásztor Bence Portfólió</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">	
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<script type="text/javascript">			
+		function playvideo(){
+			var vid = document.getElementById("lejatszas");
+			vid.play();
+		}
+		function pausevideo(){
+			var vid = document.getElementById("lejatszas");
+			vid.pause();
+		}
+	</script>
+
+	<header>
+		<div class="fejlec_box" onclick="document.location='index.html'">
+			<a href="index.html">Kezdőlap</a>
+		</div>
+		<div class="fejlec_box">
+			<a href="#">Munkáim</a>
+		</div>
+		<div class="fejlec_box" onclick="document.location='rolam.html'">
+			<a href="rolam.html">Rólam</a>
+		</div>
+		<br>
+		<div class="flex_jobbra">
+			<div class="fejlec_box jobbra_tart" onclick="document.location='doku.html'">
+				<a href="doku.html">Dokumentáció</a>
+			</div>
+		</div>
+	</header>
+
+	<main class="munkak_racs">
+			<div class="munka_egesz">
+				<div class="kep">
+					<video loop muted autobuffer id="lejatszas" onmouseover="playvideo()" onmouseleave="pausevideo()">
+						<source src="css/kepek/projekt1.mp4" type="video/mp4">
+					</video>
+				</div>
+				<a><span class="munka_leiras">Példa videoklip</span></a>
+				
+			</div>
+			<div class="munka_egesz">
+				<a href="https://www.cnc.hu/2019/03/a-feluletkezelesrol-roviden/" target="blank">
+					<div class="kep ">
+						<img src="css/kepek/nemsajat1.jpg" alt="kép acél alkatrészekről">
+					</div>
+					<span class="munka_leiras nemsajat">Cementált acél alkatrészek<br>Nem saját</span>
+				</a>
+			</div>
+			<div class="munka_egesz">
+				<a href="https://www.burjkhalifa.ae/en/the-tower/gallery/" target="blank">
+					<div class="kep">
+						<img src="css/kepek/nemsajat2.jpg" alt="kép az épületről">
+					</div>
+					<span class="munka_leiras nemsajat">Burdzs Kalifa<br>Nem saját</span>
+				</a>
+			</div>
+			<div class="munka_egesz">
+				<a href="css/kepek/hatter_it.jpg" target="blank">
+					<div class="kep">
+						<img src="css/kepek/hatter_it.jpg" alt="alternatív háttérkép">
+					</div>
+					<span class="munka_leiras">Példa kép</span>
+				</a>
+			</div>
+			<div class="munka_egesz">
+				<a href="https://m.boschrexroth.com/hu/web/hu/iparagak/gepipari-alkalmazasok-es-engineering/kohaszat/metallurgy-3" target="blank">
+					<div class="kep">
+						<img src="css/kepek/nemsajat4.jpg" alt="fémkohászatról kép">
+					</div>
+					<span class="munka_leiras nemsajat">Kohászat<br>Nem saját</span>
+				</a>
+			</div>
+			<div class="munka_egesz">
+				<a href="https://www.higem-cnc.hu/szolgaltatasok/" target="blank">
+					<div class="kep">
+						<img src="css/kepek/nemsajat3.jpg" alt="forgácsolásról kép">
+					</div>
+					<span class="munka_leiras nemsajat">Forgácsolás<br>Nem saját</span>
+				</a>
+			</div>
+
+	</main>
+
+	<footer>
+		<hr>
+		<span>Elérhetőségeim:</span>
+		<br>
+		<a href="mailto:pbence711@gmail.com">pbence711@gmail.com</a>
+		<a href="https://www.facebook.com/profile.php?id=100017759955547" target="blank" id="el_facebook">Facebook</a>
+	</footer>
+</body>
+</html>
