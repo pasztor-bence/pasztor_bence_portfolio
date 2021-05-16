@@ -11,8 +11,18 @@
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
+	<script type="text/javascript">			
+		function playvideo(){
+			var vid = document.getElementById("lejatszas");
+			vid.play();
+		}
+		function pausevideo(){
+			var vid = document.getElementById("lejatszas");
+			vid.pause();
+		}
+	</script>
 	<header>
-		<div class="fejlec_box" onclick="document.location='doku.html'">
+		<div class="fejlec_box" onclick="document.location='index.html'">
 			<a href="index.html">Kezdőlap</a>
 		</div>
 		<div class="fejlec_box" onclick="document.location='munkaim.html'">
@@ -30,8 +40,35 @@
 	</header>
 
 	<main>
-		<span id="nagy_portf">PORTFÓLIÓJA</span>
-		<span id="nagy_nev">Pásztor Bence</span>
+		<div class="keret">
+			<div class="bekezdes">
+				<p>A legelső tervek még nagyon egyszerűek voltak, ekkor még egyszínű hátteret, statikus navigációs sávot meg a legegyszerűbb egy-oszlopos képsorozatot képzeltem el. Aztán elég hamar rájöttem, hogy így elég sivár az oldal.</p>
+				<p>Sorrendben elöször egy navigációs sávot készítettem el, ami minden oldalon azonos elrendezésű és kinézetű. Az oldalakat két csoportra akartam osztani, a feladatban kért 3+1 oldal szerint. Volt egy olyan elképzelésem, hogy legyen valami effekt ami kiemel egy gombot a látható módon.</p>
+				<img src="css/kepek/doku1.png" alt="effekt vizualizáció" id="doku1">
+				<p>Ez a megoldás azonban a képernyő szűkítésével nincs baráti viszonyban, ha nem férnek el egyszerűen egy sorral lejjebb kerül a gomb, amitől vibrálni fog, hiszen ezzel már nem lesz rajta a kurzor így visszaállna.</p>
+				<img src="css/kepek/doku2.png" id="doku2">
+				<p>Ezt nem tudtam sehogy kiküszöbölni, ezért egyszerűen ez az effekt ki van kapcsolva egy szélesség alatt.</p>
+			</div>
+			<hr>
+			<div class="bekezdes">
+				<p>A főoldal elkészítésével egyidőben csináltam meg a végleges elrendeződést és a láblécet az alábbi szerint:</p>
+				<img src="css/kepek/doku3.png" id="doku3">
+			</div>
+			<hr>
+			<div class="bekezdes">
+				<p>A "Munkáim" oldalnál egy olyan <span class="dolt">aprócska</span> problémába ütköztem, hogy még nincsen sok olyan színvonalas kreálmányom, amit bemutathatnék. Ezt orvosolva <span class="athuzas">loptam</span> szereztem a netről. Ezeknél a képek mind a forrásra mutatnak.</p>
+				<p>Az egyik első ötletem ehhez az oldalhoz az volt, hogy egy GIF-szerű animált képet csináljak. Ezt úgy képzeltem el, hogy csak akkor aktív, ha a kurzort rávisszük.</p>
+				<div style="text-align: center">
+					<img src="css/kepek/doku4.png" id="doku4">
+					<br>
+					<video loop muted autobuffer id="lejatszas" onmouseover="playvideo()" onmouseleave="pausevideo()" style="display: inline-block" style="width: 50%">
+							<source src="css/kepek/projekt1.mp4" type="video/mp4">
+					</video>
+					<p style="text-align:center">Ezt 'video' formátumban sikerült megcsinálni, egy kis JS segítségével.</p>
+				</div>
+				<p></p>
+			</div>
+		</div>
 	</main>
 
 	<footer>
