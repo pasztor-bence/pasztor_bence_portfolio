@@ -33,7 +33,7 @@
 		display: grid;
 		grid-template-areas: 
 		"fejlec"
-		"kontent"
+		"tartalom"
 		"lablec"
 		;
 		min-height: 100vh;
@@ -41,12 +41,10 @@
 	}
 
 	header{
-		/*background-color: #EEEEEE;*/
 		grid-area: fejlec;
 	}
 	main{
-		/*background-image: url(../css/kepek/harold1.jpg);*/
-		grid-area: kontent;
+		grid-area: tartalom;
 	}
 	footer{
 		background-color: lightblue;
@@ -62,20 +60,22 @@
 	}
 	.fejlec_box{
 		display: inline-block;
-		border: 1px solid #AAAAAA;
-		background-color: #AAAAAA;
+		border: 1px solid #DCDCDC;
+		background-color: #DCDCDC;
 		padding: 0.5rem 0.6rem;
 		margin: 0.4rem 0.6rem;
 		border-radius: 0.5rem;
 		min-width: max-content;
 		line-height: 2rem;
 		max-height: 3rem;
+		-webkit-box-shadow: 2px 2px 10px -1px rgba(0,0,0,0.6); 
+		box-shadow: 2px 2px 10px -1px rgba(0,0,0,0.6);
 
 		transition: 0.2s;
 	}
 
 	.fejlec_box:hover{
-		background-color: #DCDCDC;
+		background-color: #EEEEEE;
 		border-color: #CCCCCC;
 		color: black;
 		cursor: pointer;
@@ -123,7 +123,7 @@
 
 
 /*Főoldal*/
-	@keyframes slideInFromLeft {
+	@keyframes BalrolCsuszas{
 	  0% {
 	    transform: translateX(-100%);
 	  }
@@ -135,20 +135,22 @@
 		position: absolute;
 		top: 40%;
 		left: 20%;
-		animation: 1s ease-out 0s 1 slideInFromLeft;
+		animation: 1s ease-out 0s 1 BalrolCsuszas;
 		margin-left: 2rem;
 		font-family: 'Open Sans Condensed', sans-serif;
 		font-size: 3rem;	
+		text-shadow: 2px 1px #666666;
 	}
 	#nagy_portf{
 		position: absolute;
 		top: 40%;
 		left: 20%;
 		margin-top: 8rem;
-		animation: 1s ease-out 0s 1 slideInFromLeft;
+		animation: 1s ease-out 0s 1 BalrolCsuszas;
 		font-family: 'Oswald', sans-serif;
 		font-weight: 700;
 		font-size: 1.5rem;
+		text-shadow: 1px 1px #666666;
 	}
 	@media only screen and (min-width: 420px){
 		#nagy_nev{
@@ -216,3 +218,159 @@
 		}
 	}
 /*Munkáim_oldal*/
+
+
+
+/*Rólam_oldal*/
+	@keyframes megjelenes{
+	  0% {
+	    opacity: 0;
+	  }
+	  100% {
+	    opacity: 1;
+	  }
+	}
+	.rolam_irat{
+		font-family: 'Noto Sans', sans-serif;
+		font-weight: 300;
+		animation: 1.5s ease-out 0s 1 megjelenes;
+		margin: 5rem 1rem 0 0;
+		border: 2px solid black;
+		border-radius: 0 20px 20px 0; 
+		line-height: 1.5rem;
+		max-width: 1200px;
+		background-color: #E3E3E3;
+		-webkit-box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.45); 
+		box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.45);
+	}
+	#rolam_cim{
+		margin: 0.8rem 1rem;
+		font-size: 1.75rem;
+	}
+	.rolam_irat h2{
+		text-decoration: underline;
+		margin-top: 2.5rem;
+		margin-left: 1rem;
+		font-size: 1rem;
+	}
+	.rolam_irat p{
+		margin-left: 0.5rem;
+		font-size: 0.8rem;
+		padding: 0.5rem 1rem;
+	}
+	ul{
+		list-style-type: circle;
+	}
+	@media only screen and (min-width: 350px){		
+		.rolam_irat h2{
+			margin-left: 1.75rem;
+			font-size: 1rem;
+		}
+		.rolam_irat p{
+			margin-left: 2rem;
+			font-size: 1rem;	
+		}
+		#rolam_cim{
+			font-size: 2.25rem;
+			margin: 1rem 2rem;
+		}
+	}
+	@media only screen and (min-width: 620px){
+		.rolam_irat{
+			line-height: 2rem;
+		}
+		.rolam_irat h2{
+			margin-left: 2.25rem;
+			font-size: 1.5rem;
+		}
+		.rolam_irat p{
+			margin-left: 3rem;
+			font-size: 1.5rem;	
+		}
+		#rolam_cim{
+			font-size: 3.25rem;
+			margin: 2rem 2rem;
+		}
+	}
+/*Rólam_oldal*/
+
+
+
+/*Domukentáció*/
+	.keret{
+		font-family: 'Noto Sans', sans-serif;
+		font-size: 0.8rem;
+		margin-top: 0rem;
+		margin-bottom: 0rem;
+		margin-left: 8%;
+		margin-right: 8%;
+		margin-top: 5rem;
+		margin-bottom: 1.5rem;
+		border: 1px solid white;
+		border-radius: 30px;
+		padding: 0.4rem;
+		background-color: white;
+		-webkit-box-shadow: 3px 3px 10px 5px rgba(0,0,0,0.5); 
+		box-shadow: 3px 3px 10px 5px rgba(0,0,0,0.5);
+	}
+	.keret * img{
+		border: 1px solid grey;
+		max-width: 1000px;
+	}
+	.keret * p{
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+	.bekezdes img{
+		margin: 0.5rem 0 0.5rem 5%;
+	}
+	#doku1{
+		width: 80%;
+		min-width: 175px;
+	}
+	#doku2{
+		width: 40%;
+		min-width: 120px;
+	}
+	#doku3{
+		width: 80%;
+		min-width: 175px;
+	}
+	.dolt{
+		font-style: italic;
+	}
+	.athuzas{
+		text-decoration: line-through;
+	}
+	#doku4{
+		margin: 0;
+		margin-top: 1rem;
+		display: inline-block;
+		/*margin-left: 20%;*/
+		width: 60%;
+		min-width: 150px;
+	}
+	.bekezdes div video{
+		display: inline-block;
+		width: 40%;
+		object-fit: contain;
+		min-width: 150px;
+	}
+	@media only screen and (min-width: 420px){
+		.keret{
+			font-size: 1rem;
+			padding: 1rem;
+		}
+		.bekezdes p{
+			margin-bottom: 1.5rem;
+		}
+	}
+	@media only screen and (min-width: 720px){
+		.bekezdes p{
+			margin-left: 1rem;
+		}
+		.keret{
+			font-size: 1.25rem;
+		}
+	}
+/*Domukentáció*/
